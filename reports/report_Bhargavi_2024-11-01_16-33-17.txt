@@ -1,0 +1,10 @@
+Report for Bhargavi
+Email: ba@gmail.com
+Contraction Count: 34.0
+Length of Contraction: 50.0
+Standard Deviation: 80.0
+Entropy: 100.0
+Contraction Times: 20.0
+Prediction: Not Preterm
+
+Wishing you good luck and health!

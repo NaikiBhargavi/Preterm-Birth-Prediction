@@ -1,0 +1,10 @@
+Report for Va
+Email: a@gmail.com
+Contraction Count: 2.0
+Length of Contraction: 1.0
+Standard Deviation: 1.0
+Entropy: 3.0
+Contraction Times: 5.0
+Prediction: Not Preterm
+
+Wishing you good luck and health!

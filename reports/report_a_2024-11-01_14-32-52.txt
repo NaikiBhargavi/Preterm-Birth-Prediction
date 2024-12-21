@@ -1,0 +1,10 @@
+Report for a
+Email: a@gmail.com
+Contraction Count: 23.0
+Length of Contraction: 30.0
+Standard Deviation: 20.0
+Entropy: 5.0
+Contraction Times: 9.0
+Prediction: Not Preterm
+
+Wishing you good luck and health!

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the form */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Header Style */
+h1 {
+    color: #0066cc;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+/* Label and Input Styles */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #004999;
+}
+
+button:active {
+    background-color: #003366;
+}
+
+/* Result Verification Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1em;
+    text-align: left;
+}
+
+ul li {
+    background-color: #e0ebf5;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+strong {
+    color: #0066cc;
+}
+
+/* Report Message Styling */
+.report-message {
+    font-size: 1.2em;
+    margin-top: 1em;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Verification of Details Entered</h1>
+    <ul>
+        {% for key, value in data.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Prediction: {{ prediction }}</h2>
+    <form action="/print_report" method="post">
+        {% for key, value in data.items() %}
+            <input type="hidden" name="{{ key }}" value="{{ value }}">
+        {% endfor %}
+        <input type="hidden" name="prediction" value="{{ prediction }}">
+        <button onclick="window.print()">Print Report</button>
+
+    </form>
+       
+   
+</body>
+</html>
